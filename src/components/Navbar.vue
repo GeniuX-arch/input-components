@@ -15,5 +15,9 @@ import { createRouter, createWebHistory } from 'vue-router';
         <li>
             Todos Los inputs
         </li>
+
+        <li @click="handleTheme">
+            cambiar tema
+        </li>
     </ul>
 </template>
