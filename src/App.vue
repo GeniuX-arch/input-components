@@ -1,16 +1,13 @@
 <script setup>
-import Navbar from './components/Navbar.vue'
-</script>
+import Navbar from '@/components/Navbar.vue'
+import { useAppStore } from '@/store/app';
 
+const appStore = useAppStore();
+</script>
 <template>
   <div>
     <Navbar />
-    
-    <h1 class="text-white ">Bienvenidos</h1>
-    <h1>Inputs-GeniuX</h1>
-    <h2>Los inputs más útiles versatiles y facil de usar para el desarrollo</h2>
-    <p></p>
-
+    <router-view />
   </div>
 </template>
 

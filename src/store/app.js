@@ -1,26 +1,24 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useContadorStore = defineStore('contador', () => {
-  const themeSwitch = ref(0)
+export const useAppStore = defineStore('appStore', () => {
+  const themeLight = {
+      background: 'bg-white'
+  }
+  const themeDark = {
+      background: 'bg-black'
+  }
 
-    const themeSelected = ref()
-    themeLight = {
-        background: 'bg-black'
-    }
-    themeDark = {
-        background: 'bg-black'
-    }
-  // Estado
+  const themeSwitch = ref(1)
+  const themeSelected = ref(themeDark)
 
-  // Acciones
   function handleTheme() {
-    if (theme){
+    if (themeSwitch.value){
         themeSelected.value = themeLight
-        theme.value = 0
+        themeSwitch.value = 0
     }else {
         themeSelected.value = themeDark
-        theme.value = 1
+        themeSwitch.value = 1
     }
   }
 

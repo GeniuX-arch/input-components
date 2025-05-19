@@ -1,23 +1,33 @@
-<script>
-import { createRouter, createWebHistory } from 'vue-router';
-</script>
-<template>
-    <ul>
-        <li>
-            Sobre Geniux
-        </li>
-        <li>
-            Más proyectos
-        </li>
-        <li>
-            Donaciones
-        </li>
-        <li>
-            Todos Los inputs
-        </li>
+<script setup>
+import { useAppStore } from '@/store/app';
 
-        <li @click="handleTheme">
-            cambiar tema
-        </li>
-    </ul>
+const appStore = useAppStore();
+</script>
+
+<template>
+  <ul class="flex flex-row gap-5 justify-center h-10 items-center select-none">
+    <li>
+        <router-link to="/">
+            Inicio
+        </router-link>
+    </li>
+    <li>
+        <router-link to="/sobre-geniux">
+            Sobre Geniux
+        </router-link>
+    </li>
+    <li>
+        <router-link to="/mas-proyectos">Más proyectos</router-link>
+    </li>
+    <li>
+        <router-link to="/donaciones">Donaciones</router-link>
+    </li>
+    <li 
+        @click="appStore.handleTheme" 
+        class="cursor-pointer "
+    >
+        cambiar tema
+    </li>
+    {{ appStore.themeSwitch }}
+  </ul>
 </template>
