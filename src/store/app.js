@@ -9,16 +9,14 @@ export const useAppStore = defineStore('appStore', () => {
     background: 'bg-black',
   };
 
-  const themeSwitch = ref(1);
+  const themeSwitch = ref(true);
   const themeSelected = ref(themeDark);
 
   function handleTheme() {
     if (themeSwitch.value) {
-      themeSelected.value = themeLight;
-      themeSwitch.value = 0;
-    } else {
       themeSelected.value = themeDark;
-      themeSwitch.value = 1;
+    } else {
+      themeSelected.value = themeLight;
     }
   }
 
