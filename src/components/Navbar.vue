@@ -1,5 +1,7 @@
 <script setup>
 import { useAppStore } from '@/store/app';
+import IconDarkTheme from '../icons/base/IconDarkTheme.vue';
+import IconLightTheme from '../icons/base/IconLightTheme.vue';
 
 const appStore = useAppStore();
 </script>
@@ -18,9 +20,13 @@ const appStore = useAppStore();
     <li>
       <router-link to="/donaciones">Donaciones</router-link>
     </li>
-    <li @click="appStore.handleTheme" class="cursor-pointer">cambiar tema</li>
-    {{
-      appStore.themeSwitch
-    }}
+    <li @click="appStore.handleTheme" class="cursor-pointer">
+      <div v-if="appStore.themeSwitch">
+        <IconLightTheme />
+      </div>
+      <div v-if="!appStore.themeSwitch">
+        <IconDarkTheme />
+      </div>
+    </li>
   </ul>
 </template>
