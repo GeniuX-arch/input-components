@@ -1,8 +1,6 @@
 <script setup>
-import Layout from '@/views/Layout.vue'
+import Layout from '@/views/Layout.vue';
 </script>
 <template>
-    <Layout>
-        SobreGeniux
-    </Layout>
+  <Layout> SobreGeniux </Layout>
 </template>

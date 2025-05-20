@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from '@/components/Navbar.vue'
+import Navbar from '@/components/Navbar.vue';
 import { useAppStore } from '@/store/app';
 
 const appStore = useAppStore();
@@ -12,5 +12,5 @@ const appStore = useAppStore();
 </template>
 
 <style>
-@import "tailwindcss";
+@import 'tailwindcss';
 </style>
