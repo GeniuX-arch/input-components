@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
     tailwindcss(),
+    remix()
   ],
   resolve: {
     alias: {
