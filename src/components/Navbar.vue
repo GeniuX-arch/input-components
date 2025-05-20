@@ -81,6 +81,20 @@ const clearActiveItem = () => {
           @mouseover="setActiveItem('donations')"
           @mouseleave="clearActiveItem()"
         >
+          Inputs
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          to="/donaciones"
+          class="font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+          :class="{
+            'text-indigo-600 dark:text-indigo-400':
+              $route.path === '/donaciones',
+          }"
+          @mouseover="setActiveItem('donations')"
+          @mouseleave="clearActiveItem()"
+        >
           Donaciones
         </router-link>
       </li>
